@@ -1,15 +1,29 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import App from './components/App/App';
+import { Provider } from 'react-redux';
+import store from './store';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+    <React.StrictMode>
+        <AppRow />
+    </React.StrictMode>,
+    document.getElementById('weatherWidget')
 );
+
+function AppRow() {
+    return (
+        <Provider store={store}>
+            <Router>
+                <Switch>
+                    <Route path="/" component={App} />
+                </Switch>                
+            </Router>
+        </Provider>
+    );
+}
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

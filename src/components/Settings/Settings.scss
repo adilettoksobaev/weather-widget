@@ -1,0 +1,44 @@
+.settings {
+    max-width: 375px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    &__head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        font-weight: 500;
+        a {
+            display: flex;
+        }
+    }
+    &__close {
+        width: 24px;
+        cursor: pointer;
+    }
+    &__row {
+        padding: 0;
+        margin: 0;
+    }
+    &__item {
+        display: flex;
+        align-items: center;
+        position: relative;
+        background-color: #0000000a;
+        padding: 6px 8px;
+        margin-bottom: 15px;
+    }
+    &__icon {
+        max-width: 24px;
+        cursor: move;
+        margin-right: 10px;
+        &.delete {
+            position: absolute;
+            right: 6px;
+            margin-right: 0;
+            cursor: pointer;
+        }
+    }
+}

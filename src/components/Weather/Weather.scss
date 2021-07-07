@@ -1,0 +1,47 @@
+.weather-box {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    &__title {
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 24px;
+        a {
+            display: flex;
+        }
+    }
+    .settings-icon {
+        width: 24px;
+        cursor: pointer;
+    }
+    &__condition {
+        display: flex;
+        align-items: center;
+    }
+    &__celsius {
+        font-size: 40px;
+        font-weight: 600;
+        margin-left: 10px;
+        text-transform: uppercase;
+    }
+    &__text {
+        margin-bottom: 10px;
+        &.desc {
+            min-height: 44px;
+        }
+    }
+    &__content {
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+    }
+    &__icon {
+        margin-right: 10px;
+        width: 24px;
+        &.rotate {
+            transform: rotate(-45deg);
+        }
+    }
+}
