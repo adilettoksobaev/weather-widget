@@ -26,23 +26,23 @@ function SettingsContainer(props: Props) {
     };
 
     const handleDrag = (e: any) => {
-        setDragId(e.currentTarget.id);
+        setDragId(Number(e.currentTarget.id));
     };
 
     const handleDrop = (e: any) => {
         if(dragId) {
-            const dragBox = weather.find((box) => box.id == dragId);
-            const dropBox = weather.find((box) => box.id == e.currentTarget.id);
+            const dragBox = weather.find((box) => box.id === dragId);
+            const dropBox = weather.find((box) => box.id === Number(e.currentTarget.id));
             
             const dragBoxOrder = dragBox && dragBox.order;
             const dropBoxOrder = dropBox && dropBox.order;
-            
+
             // Reorder the cities by dragging
             const newBoxState = weather.map((box) => {
-                if (box.id == dragId) {
+                if (box.id === dragId) {
                     box.order = dropBoxOrder!;
                 }
-                if (box.id == e.currentTarget.id) {
+                if (box.id === Number(e.currentTarget.id)) {
                     box.order = dragBoxOrder!;
                 }
                 return box;
