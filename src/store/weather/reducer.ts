@@ -18,7 +18,7 @@ const weatherReducerPrivate: Reducer<WeatherState, WeatherActions> = (
     state = defaultState,
     action) => {
     switch (action.type) {
-        case WeatherActionTypes.GET_WEATHER:
+        case WeatherActionTypes.SET_WEATHER:
             return {
                 ...state,
                 weather: action.weather

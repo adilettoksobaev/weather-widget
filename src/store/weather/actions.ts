@@ -60,7 +60,7 @@ export const getWeatherAction: ActionCreator<ThunkAction<Promise<any>, RootState
                 newWeather = replaceItemAtIndex(weather, index, currentWeather);
             }
             const successAction: IGetWeatherAction = {
-                type: WeatherActionTypes.GET_WEATHER,
+                type: WeatherActionTypes.SET_WEATHER,
                 weather: newWeather
             };
             dispatch(successAction);
@@ -74,7 +74,7 @@ export const getWeatherAction: ActionCreator<ThunkAction<Promise<any>, RootState
 
 export const setWeatherAction: ActionCreator<IGetWeatherAction> = (weather: IWeather[]) => {
     return {
-        type: WeatherActionTypes.GET_WEATHER,
+        type: WeatherActionTypes.SET_WEATHER,
         weather
     }
 }

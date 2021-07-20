@@ -10,7 +10,7 @@ ReactDOM.render(
     <React.StrictMode>
         <AppRow />
     </React.StrictMode>,
-    document.getElementById('weatherWidget')
+    document.getElementById('root')
 );
 
 function AppRow() {

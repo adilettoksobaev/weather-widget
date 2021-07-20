@@ -7,12 +7,12 @@ export interface WeatherState {
 }
 
 export enum WeatherActionTypes {
-    GET_WEATHER = 'GET_WEATHER',
+    SET_WEATHER = 'SET_WEATHER',
     GEO_POINT = 'GEO_POINT',
     FETCH_ERROR = 'FETCH_ERROR'
 }
 
-export interface IGetWeatherAction extends Action<WeatherActionTypes.GET_WEATHER> {
+export interface IGetWeatherAction extends Action<WeatherActionTypes.SET_WEATHER> {
     weather: IWeather[]
 }
 
